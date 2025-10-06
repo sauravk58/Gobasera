@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 @Controller()
 export class AppController {
+  //show on backend api.
   @Get()
   getRoot() {
     return { status: 'ok', message: 'GoBasera backend is running 🚀' };
