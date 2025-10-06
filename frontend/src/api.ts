@@ -1,4 +1,7 @@
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL =
+  import.meta.env.MODE === 'development'
+    ? 'http://localhost:4000'
+    : 'https://gobasera-f3oc.onrender.com';
 
 export async function fetchAnnouncements() {
   const res = await fetch(`${BASE_URL}/announcements`);
